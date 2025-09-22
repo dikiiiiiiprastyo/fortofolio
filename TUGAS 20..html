@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Diki Frasetiyo</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 10px;
+            display: block;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            background-color: #666;
+        }
+
+        .section {
+            display: none;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 3px solid #555;
+        }
+
+        ul.list {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        ul.list li {
+            padding: 10px;
+            background: #fff;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Portofolio Diki Frasetiyo</h1>
+    </header>
+
+    <!-- Navigasi -->
+    <nav>
+        <ul>
+            <li><a href="#" class="tablink active" onclick="openTab(event, 'biodata')">Biodata</a></li>
+            <li><a href="#" class="tablink" onclick="openTab(event, 'proyek')">Proyek</a></li>
+            <li><a href="#" class="tablink" onclick="openTab(event, 'prakarya')">Prakarya</a></li>
+        </ul>
+    </nav>
+
+    <!-- Halaman Biodata -->
+    <section id="biodata" class="section active">
+        <h2>Biodata Saya</h2>
+        <img src="photo.jpg" alt="Foto Diki Frasetiyo" class="profile-pic">
+        <h3>Nama: Diki Frasetiyo</h3>
+        <p>Alamat: Wonosari Patean, Kendal</p>
+        <p>Tempat, Tanggal Lahir: Patean, 7 Mei 2008</p>
+    </section>
+
+    <!-- Halaman Proyek -->
+    <section id="proyek" class="section">
+        <h2>Proyek Saya</h2>
+        <ul class="list">
+            <li><strong>Proyek 1:</strong> Website Portofolio Pribadi</li>
+            <li><strong>Proyek 2:</strong> Aplikasi Manajemen Tugas</li>
+            <li><strong>Proyek 3:</strong> Sistem E-Commerce Sederhana</li>
+        </ul>
+    </section>
+
+    <!-- Halaman Prakarya -->
+    <section id="prakarya" class="section">
+        <h2>Prakarya Saya</h2>
+        <ul class="list">
+            <li><strong>Prakarya 1:</strong> Kerajinan dari Kain Flanel</li>
+            <li><strong>Prakarya 2:</strong> Desain Digital dengan Photoshop</li>
+            <li><strong>Prakarya 3:</strong> Model 3D Menggunakan Blender</li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Diki Frasetiyo</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function openTab(evt, tabName) {
+            var i, sections, tablinks;
+            sections = document.getElementsByClassName("section");
+            for (i = 0; i < sections.length; i++) {
+                sections[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+
+</body>
+</html>
